@@ -22,8 +22,8 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
    include( dirname( __FILE__ ) . '/local-config.php' );
 } else {
   define( 'WP_LOCAL_DEV', false );
-  define('WP_HOME','http://devops.elasticbeanstalk.com');
-  define('WP_SITEURL','http://devops.elasticbeanstalk.com');
+  define('WP_HOME','https://devops.elasticbeanstalk.com');
+  define('WP_SITEURL','https://devops.elasticbeanstalk.com');
 }
 
 
