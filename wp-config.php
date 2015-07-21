@@ -17,12 +17,22 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-define('WP_HOME','http://devops.elasticbeanstalk.com/');
-define('http://devops.elasticbeanstalk.com/');
-
 if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
-    include( dirname( __FILE__ ) . '/local-config.php' );
+   define( 'WP_LOCAL_DEV', true );
+   include( dirname( __FILE__ ) . '/local-config.php' );
+} else {
+  define( 'WP_LOCAL_DEV', false );
+  define('WP_HOME',' devops.elasticbeanstalk.com');
+  define('WP_SITEURL',' devops.elasticbeanstalk.com');
 }
+
+
+//define('WP_HOME','http://devops.elasticbeanstalk.com/');
+//define('http://devops.elasticbeanstalk.com/');
+
+//if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
+//    include( dirname( __FILE__ ) . '/local-config.php' );
+//}
 
 define('DB_NAME', 'ebdb');
 
