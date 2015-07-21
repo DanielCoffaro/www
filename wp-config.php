@@ -17,6 +17,9 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
+define('WP_HOME','http://devops.elasticbeanstalk.com/');
+define('http://devops.elasticbeanstalk.com/');
+
 if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
     include( dirname( __FILE__ ) . '/local-config.php' );
 }
